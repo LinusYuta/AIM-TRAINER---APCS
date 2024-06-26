@@ -1,10 +1,10 @@
 import java.util.ArrayList;
-//import processing.sound.*;
+import processing.sound.*;
 
 Camera newCam;
 PImage img;
 PShape enviro;
-//SoundFile gunShot;
+SoundFile gunShot;
 
 public Target tar1;
 public ArrayList<Bullet> bulletList = new ArrayList<Bullet>();
@@ -27,7 +27,7 @@ void setup() {
   enviro = createShape(SPHERE, 3000);
   enviro.setTexture(img);
   enviro.setStrokeWeight(0);
-  //gunShot = new SoundFile(this, "gunShot1.mp3");
+  gunShot = new SoundFile(this, "gunShot1.mp3");
 }
 
 void draw() {
@@ -145,7 +145,7 @@ void mousePressed(){
     
     }
     
-    //gunShot.play();
+    gunShot.play();
     
 
 
